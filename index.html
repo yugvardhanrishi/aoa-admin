@@ -4,238 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Portal - Abacus Olympic Association</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
+    
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NDHWK24L");
+    </script>
+    
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="shortcut icon"
+      href="https://image1.jdomni.in/storeLogo/23022026/23/0A/4A/6F82981B0A8135832085D87DAE_1771865831290.png?output-format=webp"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://image1.jdomni.in/storeLogo/23022026/23/0A/4A/6F82981B0A8135832085D87DAE_1771865831290.png?output-format=webp"
     />
 
-    <style>
-      /* Base Reset & Modern Font */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-      }
-
-      /* Ultra-clean off-white background */
-      .admin-bg {
-        background-color: #fafafa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      .admin-login-wrapper {
-        width: 100%;
-        max-width: 400px; /* Slightly narrower for a tighter, cleaner look */
-        padding: 20px;
-      }
-
-      /* Soft, elegant card */
-      .admin-card {
-        background: #ffffff;
-        padding: 45px 35px;
-        border-radius: 16px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-        border: 1px solid #f0f0f0;
-      }
-
-      /* Branding & Typography */
-      .admin-brand {
-        text-align: center;
-        margin-bottom: 35px;
-      }
-
-      .shield-icon {
-        font-size: 32px;
-        color: #000000;
-        margin-bottom: 15px;
-      }
-
-      .admin-brand h1 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #111111;
-        margin-bottom: 6px;
-        letter-spacing: -0.5px;
-      }
-
-      .admin-brand p {
-        font-size: 0.9rem;
-        color: #888888;
-      }
-
-      /* Form Styles */
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-group label {
-        display: block;
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: #444444;
-        margin-bottom: 8px;
-      }
-
-      .input-with-icon {
-        position: relative;
-      }
-
-      .input-with-icon i {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #999999;
-        font-size: 0.9rem;
-      }
-
-      .input-with-icon input {
-        width: 100%;
-        padding: 14px 14px 14px 42px;
-        background-color: #f9f9f9;
-        border: 1px solid #eeeeee;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        color: #111111;
-        transition: all 0.2s ease;
-        outline: none;
-      }
-
-      /* Clean focus state without any bright colors */
-      .input-with-icon input:focus {
-        background-color: #ffffff;
-        border-color: #cccccc;
-        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
-      }
-
-      /* Error Message Container */
-      .error-message {
-        color: #ef4444;
-        font-size: 0.85rem;
-        text-align: center;
-        margin-bottom: 15px;
-        min-height: 20px;
-        display: none;
-      }
-
-      /* Submit Button - Pure minimal black */
-      .admin-btn {
-        width: 100%;
-        padding: 14px;
-        background-color: #000000;
-        color: #ffffff;
-        border: none;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .admin-btn:hover {
-        background-color: #333333;
-        transform: translateY(-1px);
-      }
-
-      .admin-btn:disabled {
-        background-color: #e0e0e0;
-        color: #888888;
-        cursor: not-allowed;
-        transform: none;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-B4EiCKB6.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-HN6DQpiu.css">
   </head>
-  <body class="admin-bg">
-    <div class="admin-login-wrapper">
-      <div class="admin-card">
-        <div class="admin-brand">
-          <img
-            src="/portal/Abacus.png"
-            alt="Abacus Olympic Association"
-            style="
-              width: 70px;
-              height: 70px;
-              object-fit: contain;
-              margin-bottom: 15px;
-            "
-          />
-          <h1>Admin Control</h1>
-          <p>Abacus Olympic Association</p>
-        </div>
-
-        <form id="adminLoginForm">
-          <div class="form-group">
-            <label for="adminEmail">Email Address</label>
-            <div class="input-with-icon">
-              <img
-                src="/portal/Abacus.png"
-                alt="Abacus Logo"
-                style="
-                  position: absolute;
-                  left: 15px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  width: 18px;
-                  height: 18px;
-                  object-fit: contain;
-                "
-              />
-              <input
-                type="email"
-                id="adminEmail"
-                placeholder="admin@domain.com"
-                autocomplete="username"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="adminPassword">Password</label>
-            <div class="input-with-icon">
-              <i class="fa-solid fa-lock"></i>
-              <input
-                type="password"
-                id="adminPassword"
-                placeholder="••••••••"
-                autocomplete="current-password"
-                required
-              />
-            </div>
-          </div>
-
-          <div id="errorMessage" class="error-message"></div>
-          
-          <div style="text-align: right; margin-top: -12px; margin-bottom: 16px;">
-  <a href="/reset-password/" 
-     id="forgotLink"
-     style="font-size: 0.82rem; color: #888; text-decoration: none;">
-    Forgot password?
-  </a>
-</div>
-
-          <button type="submit" class="admin-btn" id="loginBtn">
-            Authenticate <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/dashboard/admin-auth.js"></script>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDHWK24L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="root"></div>
   </body>
 </html>
